@@ -1,0 +1,21 @@
+#slider {
+   background: #000;
+   border: 8px solid #DDD;
+   box-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+   height: 450px;
+   width: 800px;
+   margin: 40px auto 0;
+   overflow: visible;
+   position: relative;
+}
+
+#mask {
+   overflow: hidden;
+   height: 450px;
+}
+
+#slider ul {
+   margin: 0;
+   padding: 0;
+   position: relative;
+}
