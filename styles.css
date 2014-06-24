@@ -19,3 +19,86 @@
    padding: 0;
    position: relative;
 }
+
+#slider li {
+   width: 800px;
+   height: 450px;
+   position: absolute;
+   top: -458px;
+   list-style: none;
+}
+
+#slider li.firstanimation {
+   -webkit-animation: cycle 20s linear infinite;
+}
+
+#slider li.secondanimation {
+   -webkit-animation: cycletwo 20s linear infinite;
+}
+
+#slider li.thirdanimation {
+   -webkit-animation: cyclethree 20s linear infinite;
+}
+
+#slider li.fourthanimation {
+   -webkit-animation: cyclefour 20s linear infinite;
+}
+
+#slider li.fifthanimation {
+   -webkit-animation: cyclefive 20s linear infinite;
+}
+
+/* ANIMATION */
+
+/* 20s=100% so 1 second=5% */
+@-webkit-keyframes cycle {
+   0%  { top: 0px; } /* First image is visible from the start*/
+   5%  { top: 0px; } /* Original position */
+   15% { top: 0px; opacity:1; z-index:0; } /* Visible for two seconds */
+   20% { top: 458px; opacity: 0; z-index: 0; } /* Vanishes for one second */
+   21% { top: -458px; opacity: 0; z-index: -1; } /* Completely hidden from here */
+   90% { top: -458px; opacity: 0; z-index: 0; } /* Change the z-index */
+   95% { top: -458px; opacity: 0; } /* Appear for 1 second */
+   100%{ top: 0px; opacity: 1; }
+}
+
+@-webkit-keyframes cycletwo {
+   0%  { top: -458px; opacity: 0; } /* Original Position */
+   15% { top: -458px; opacity: 0; }/* Starts moving after 3 seconds to this position */
+   20% { top: 0px; opacity: 1; }
+   25% { top: 0px; opacity: 1; }  /* For 1 second enter image*/
+   35% { top: 0px; opacity: 1; z-index: 0; }
+   40% { top: 458px; opacity: 0; z-index: 0; }
+   41% { top: -458px; opacity: 0; z-index: -1; }
+   100%{ top: -458px; opacity: 0; z-index: -1; }
+}
+
+@-webkit-keyframes cyclethree {
+   0%  { top: -458px; opacity: 0; }
+   35% { top: -458px; opacity: 0; }
+   40% { top: 0px; opacity: 1; }
+   45% { top: 0px; opacity: 1; }
+   55% { top: 0px; opacity: 1; }
+   60% { top: 458px; opacity: 0; z-index: 0; }
+   61% { top: -458px; opacity: 0; z-index: -1; }
+   100%{ top: -458px; opacity: 0; z-index: -1; }
+}
+
+@-webkit-keyframes cyclefour {
+   0%  { top: -458px; opacity: 0; }
+   55% { top: -458px; opacity: 0; }
+   60% { top: 0px; opacity: 1; }
+   65% { top: 0px; opacity: 1; }
+   75% { top: 0px; opacity: 1; z-index: 0; }
+   80% { top: 458px; opacity: 0; z-index: 0; }
+   81% { top: -458px; opacity: 0; z-index: -1; }
+   100%{ top: -458px; opacity: 0; z-index: -1; }
+}
+@-webkit-keyframes cyclefive {
+   0%  { top: -458px; opacity: 0; }
+   75% { top: -458px; opacity: 0; }
+   80% { top: 0px; opacity: 1; }
+   85% { top: 0px; opacity: 1; }
+   95% { top: 0px; opacity: 1; z-index: 0; }
+   100%{ top: 458px; opacity: 0; z-index: 0; }
+}
